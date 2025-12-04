@@ -6,6 +6,7 @@ const API = axios.create({
   // baseURL: 'http://localhost:8080/api',
   // URL REMOTE
   baseURL: 'https://notesapp-a6cuddbjdkeza7ft.canadacentral-01.azurewebsites.net/api',
+  withCredentials: true,
   headers: {
         'Access-Control-Allow-Origin': '*',
         'Access-Control-Allow-Credentials': 'true',
@@ -219,3 +220,4 @@ API.interceptors.response.use(
   }
 
 );
+
