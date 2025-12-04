@@ -7,6 +7,8 @@ const API = axios.create({
   // URL REMOTE
   baseURL: 'https://notesapp-a6cuddbjdkeza7ft.canadacentral-01.azurewebsites.net/api',
   headers: {
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Credentials': 'true',
     'Content-Type': 'application/json'
   }
 });
@@ -215,4 +217,5 @@ API.interceptors.response.use(
 
     return Promise.reject(error);
   }
+
 );
